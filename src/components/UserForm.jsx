@@ -1,5 +1,6 @@
 import { useState } from "react"
 import FormUserDetails from "./FormUserDetails"
+import FormPersonalDetails from "./FormPersonalDetails"
 
 const UserForm = () => {
     const [step, setStep] = useState(1)
@@ -38,9 +39,18 @@ const UserForm = () => {
         setBio(e.target.value)
     }
     //*************************************************************** */
-    return (
-        <></>
-    )
+    switch(step) {
+        case 1:
+            return (
+                <FormUserDetails 
+                    nextStep={nextStep}
+                    firstName={firstName}
+                    lastName={lastName}
+                    handleFirstNameChange={handleFirstNameChange}
+                    handleLastNameChange={handleLastNameChange}        
+                />
+            )
+    }
 }
 
 export default UserForm
