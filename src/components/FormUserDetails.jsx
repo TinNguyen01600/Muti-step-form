@@ -1,4 +1,4 @@
-import AppBar from '@mui/material/AppBar';
+import MyAppBar from './MyAppBar';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 
 const FormUserDetails = ({
@@ -11,7 +11,7 @@ const FormUserDetails = ({
 
     return (
         <ThemeProvider theme={theme}>
-            <AppBar>Enter User Details</AppBar>
+            <MyAppBar title="Enter User Details"/>
         </ThemeProvider>
     )
 }
