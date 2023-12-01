@@ -14,11 +14,11 @@ const UserForm = () => {
     //*************************************************************** */
     // Proceed to next step
     const nextStep = () => {
-        setStep(step+1)
+        setStep(step + 1)
     }
     // Go back to prev step
     const prevStep = () => {
-        setStep(step-1)
+        setStep(step - 1)
     }
     const handleFirstNameChange = (e) => {
         setFirstName(e.target.value)
@@ -39,22 +39,31 @@ const UserForm = () => {
         setBio(e.target.value)
     }
     //*************************************************************** */
-    switch(step) {
+    switch (step) {
         case 1:
             return (
-                <FormUserDetails 
+                <FormUserDetails
                     nextStep={nextStep}
                     firstName={firstName}
                     lastName={lastName}
                     email={email}
                     handleFirstNameChange={handleFirstNameChange}
                     handleLastNameChange={handleLastNameChange}
-                    handleEmailChange={handleEmailChange}     
+                    handleEmailChange={handleEmailChange}
                 />
             )
         case 2:
             return (
-                <h2>Form Personal Details</h2>
+                <FormPersonalDetails
+                    nextStep={nextStep}
+                    prevStep={prevStep}
+                    occupation={occupation}
+                    city={city}
+                    bio={bio}
+                    handleOccupationChange={handleOccupationChange}
+                    handleCityChange={handleCityChange}
+                    handleBioChange={handleBioChange}
+                />
             )
     }
 }
