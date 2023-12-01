@@ -59,7 +59,7 @@ const FormPersonalDetails = ({
                         Continue
                     </Button>
                     <Button
-                        variant='contained'
+                        variant='outlined'
                         onClick={handleBack}
                         style={styles.button}
                     >

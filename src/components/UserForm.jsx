@@ -1,6 +1,7 @@
 import { useState } from "react"
 import FormUserDetails from "./FormUserDetails"
 import FormPersonalDetails from "./FormPersonalDetails"
+import Confirm from "./Confirm"
 
 const UserForm = () => {
     const [step, setStep] = useState(1)
@@ -63,6 +64,19 @@ const UserForm = () => {
                     handleOccupationChange={handleOccupationChange}
                     handleCityChange={handleCityChange}
                     handleBioChange={handleBioChange}
+                />
+            )
+        case 3:
+            return (
+                <Confirm
+                    nextStep={nextStep}
+                    prevStep={prevStep}
+                    firstName={firstName}
+                    lastName={lastName}
+                    email={email}
+                    occupation={occupation}
+                    city={city}
+                    bio={bio}
                 />
             )
     }
