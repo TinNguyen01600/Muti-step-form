@@ -52,6 +52,10 @@ const UserForm = () => {
                     handleEmailChange={handleEmailChange}     
                 />
             )
+        case 2:
+            return (
+                <h2>Form Personal Details</h2>
+            )
     }
 }
 
