@@ -46,8 +46,10 @@ const UserForm = () => {
                     nextStep={nextStep}
                     firstName={firstName}
                     lastName={lastName}
+                    email={email}
                     handleFirstNameChange={handleFirstNameChange}
-                    handleLastNameChange={handleLastNameChange}        
+                    handleLastNameChange={handleLastNameChange}
+                    handleEmailChange={handleEmailChange}     
                 />
             )
     }
