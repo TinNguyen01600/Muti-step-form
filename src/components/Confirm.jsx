@@ -1,11 +1,12 @@
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import ListItemButton from '@mui/material/ListItemButton';
 import { Button } from '@mui/material'
 import MyAppBar from './MyAppBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const FormPersonalDetails = ({
+const Confirm = ({
     nextStep, prevStep,
     firstName,
     lastName,
@@ -30,22 +31,34 @@ const FormPersonalDetails = ({
             <form action="" style={styles.form}>
                 <List>
                     <ListItem>
-                        <ListItemText primary="First Name" secondary={firstName} />
+                        <ListItemButton sx={{width: '500px', textAlign: 'center'}}>
+                            <ListItemText primary="First Name" secondary={firstName} />
+                        </ListItemButton>
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Last Name" secondary={lastName} />
+                        <ListItemButton sx={{width: '500px', textAlign: 'center'}}>
+                            <ListItemText primary="Last Name" secondary={lastName} />
+                        </ListItemButton>
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Email" secondary={email} />
+                        <ListItemButton sx={{width: '500px', textAlign: 'center'}}>
+                            <ListItemText primary="Email" secondary={email} />
+                        </ListItemButton>
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Occupation" secondary={occupation} />
+                        <ListItemButton sx={{width: '500px', textAlign: 'center'}}>
+                            <ListItemText primary="Occupation" secondary={occupation} />
+                        </ListItemButton>
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="City" secondary={city} />
+                        <ListItemButton sx={{width: '500px', textAlign: 'center'}}>
+                            <ListItemText primary="City" secondary={city} />
+                        </ListItemButton>
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Bio" secondary={bio} />
+                        <ListItemButton sx={{width: '500px', textAlign: 'center'}}>
+                            <ListItemText primary="Bio" secondary={bio} />
+                        </ListItemButton>
                     </ListItem>
                 </List>
 
@@ -80,4 +93,4 @@ const styles = {
     },
     button: { margin: '35px' }
 }
-export default FormPersonalDetails
+export default Confirm

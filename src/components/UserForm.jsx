@@ -2,6 +2,7 @@ import { useState } from "react"
 import FormUserDetails from "./FormUserDetails"
 import FormPersonalDetails from "./FormPersonalDetails"
 import Confirm from "./Confirm"
+import Success from "./Success"
 
 const UserForm = () => {
     const [step, setStep] = useState(1)
@@ -78,6 +79,10 @@ const UserForm = () => {
                     city={city}
                     bio={bio}
                 />
+            )
+        case 4:
+            return (
+                <Success />
             )
     }
 }
